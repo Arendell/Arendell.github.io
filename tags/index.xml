@@ -6,6 +6,31 @@
         <description>Recent content in Tags on 大飞的避难所🤪</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>Arendelle_fei</copyright><atom:link href="https://Arendell.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+        <copyright>Arendelle_fei</copyright>
+        <lastBuildDate>Mon, 24 Feb 2025 20:04:28 +0800</lastBuildDate><atom:link href="https://Arendell.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Hugo</title>
+        <link>https://Arendell.github.io/tags/hugo/</link>
+        <pubDate>Mon, 24 Feb 2025 20:04:28 +0800</pubDate>
+        
+        <guid>https://Arendell.github.io/tags/hugo/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Markdown</title>
+        <link>https://Arendell.github.io/tags/markdown/</link>
+        <pubDate>Mon, 24 Feb 2025 20:04:28 +0800</pubDate>
+        
+        <guid>https://Arendell.github.io/tags/markdown/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>静态网站</title>
+        <link>https://Arendell.github.io/tags/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/</link>
+        <pubDate>Mon, 24 Feb 2025 20:04:28 +0800</pubDate>
+        
+        <guid>https://Arendell.github.io/tags/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/</guid>
+        <description></description>
+        </item>
+        
     </channel>
 </rss>
