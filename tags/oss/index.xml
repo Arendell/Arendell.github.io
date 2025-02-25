@@ -159,9 +159,8 @@
 &lt;hr&gt;
 &lt;blockquote&gt;
 &lt;p&gt;总算把阿里云的部分弄完了，阿里云的控制台可读性太差，全是&lt;del&gt;阿里黑话&lt;/del&gt;SDN术语🤑&lt;/p&gt;&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;接下来我们处理PicGO&lt;/p&gt;&lt;/blockquote&gt;
-&lt;ol start=&#34;10&#34;&gt;
+&lt;h3 id=&#34;安装配置picgo&#34;&gt;安装配置PicGo
+&lt;/h3&gt;&lt;ol start=&#34;10&#34;&gt;
 &lt;li&gt;下载&lt;a class=&#34;link&#34; href=&#34;https://github.com/Molunerfinn/PicGo/tags&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;PicGO&lt;/a&gt;，记得给人家点点Star🌟&lt;img src=&#34;https://arendelle-image-bed.oss-cn-hangzhou.aliyuncs.com/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A/20250225114747347.png&#34;
 	
