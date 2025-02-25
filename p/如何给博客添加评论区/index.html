@@ -10,7 +10,7 @@
 <meta property='og:description' content="基于GitHub Discussions 实现的评论系统模块">
 <meta property='og:url' content='https://Arendell.github.io/p/%E5%A6%82%E4%BD%95%E7%BB%99%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E5%8C%BA/'>
 <meta property='og:site_name' content='大飞的避难所🤪'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Github' /><meta property='article:tag' content='giscus' /><meta property='article:tag' content='Hugo' /><meta property='article:published_time' content='2025-02-25T14:05:37&#43;08:00'/><meta property='article:modified_time' content='2025-02-25T17:37:30&#43;08:00'/><meta property='og:image' content='https://arendelle-image-bed.oss-cn-hangzhou.aliyuncs.com/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A/20250225141824373.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Github' /><meta property='article:tag' content='giscus' /><meta property='article:tag' content='Hugo' /><meta property='article:published_time' content='2025-02-25T14:05:37&#43;08:00'/><meta property='article:modified_time' content='2025-02-25T19:46:39&#43;08:00'/><meta property='og:image' content='https://arendelle-image-bed.oss-cn-hangzhou.aliyuncs.com/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A/20250225141824373.png' />
 <meta name="twitter:title" content="如何给博客添加评论区">
 <meta name="twitter:description" content="基于GitHub Discussions 实现的评论系统模块"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://arendelle-image-bed.oss-cn-hangzhou.aliyuncs.com/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A/20250225141824373.png' />
@@ -289,6 +289,12 @@
             <nav id="TableOfContents">
   <ol>
     <li><a href="#为什么要做评论区">为什么要做评论区</a></li>
+    <li><a href="#方案介绍">方案介绍</a>
+      <ol>
+        <li><a href="#giscus利用-github-discussions-实现的评论系统"><a href="https://giscus.app/zh-CN">Giscus</a>，利用 GitHub Discussions 实现的评论系统</a></li>
+      </ol>
+    </li>
+    <li><a href="#部署过程">部署过程</a></li>
   </ol>
 </nav>
         </div>
@@ -365,7 +371,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 1 分钟
+                    阅读时长: 2 分钟
                 </time>
             </div>
         
@@ -381,7 +387,99 @@
     
     
     <h2 id="为什么要做评论区">为什么要做评论区
-</h2><p>方便大火基于某一篇文章做互动，也方便作者了解大家对于某篇文章的想法。</p>
+</h2><p>方便大火基于某一篇文章做互动，也方便作者了解大家对于某篇文章的想法。自新媒体时代大家就习惯于使用【评论区】之类的东西。逻辑功能清晰明了。</p>
+<h2 id="方案介绍">方案介绍
+</h2><p>交互式评论区这种东西，纯靠前端做在一个没有登录系统的静态网页上，显然是不现实的，因此hugo提供了大量的comment服务接口，方便大家接入各类提供评论的服务商。<img src="https://arendelle-image-bed.oss-cn-hangzhou.aliyuncs.com/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A/20250225191843118.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+>那即然是【商】就要赚钱，那么有没有一种方便快捷还开源的解决方案呢？<strong>有的兄弟，有的！</strong></p>
+<h3 id="giscus利用-github-discussions-实现的评论系统"><a class="link" href="https://giscus.app/zh-CN"  target="_blank" rel="noopener"
+    >Giscus</a>，利用 GitHub Discussions 实现的评论系统
+</h3><p>多的不说少的不唠，我们看看官网怎么写的<img src="https://arendelle-image-bed.oss-cn-hangzhou.aliyuncs.com/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A/20250225192131848.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<ul>
+<li>开源（免费😍）</li>
+<li>基于Github（大家都有账号）</li>
+<li>简单部署至静态网页</li>
+</ul>
+<p>这下完了，三个都是妥妥的痛点解决呀！不得不用了😭😭😭</p>
+<h2 id="部署过程">部署过程
+</h2><blockquote>
+<p>其实我建议大家仔细阅读<a class="link" href="https://giscus.app/zh-CN"  target="_blank" rel="noopener"
+    >Giscus</a>的官网，几乎是傻瓜式部署了。</p></blockquote>
+<ol>
+<li>新建一个GitHub仓库，并确保他是Public状态。<img src="https://arendelle-image-bed.oss-cn-hangzhou.aliyuncs.com/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A/20250225192948108.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></li>
+<li>给这个仓库开启<a class="link" href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/enabling-or-disabling-github-discussions-for-a-repository"  target="_blank" rel="noopener"
+    >Discussions</a>功能，勾上就行。<img src="https://arendelle-image-bed.oss-cn-hangzhou.aliyuncs.com/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A/20250225172231448.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></li>
+<li>把<a class="link" href="https://github.com/apps/giscus"  target="_blank" rel="noopener"
+    >giscus.app</a>安装到这个仓库，只选择安装到刚刚配置Discussions的仓库就行。</li>
+<li>回到<a class="link" href="https://giscus.app/zh-CN"  target="_blank" rel="noopener"
+    >Giscus</a>官网，基于刚刚创建的仓库名字，在官网获取配置文件。<img src="https://arendelle-image-bed.oss-cn-hangzhou.aliyuncs.com/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A/20250225193933676.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></li>
+<li>配置如图选择。<img src="https://arendelle-image-bed.oss-cn-hangzhou.aliyuncs.com/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A/20250225193847152.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></li>
+<li>向下滑，找到这一大堆参数。把他保存好<img src="https://arendelle-image-bed.oss-cn-hangzhou.aliyuncs.com/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A/20250225194100048.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></li>
+<li>打开hugo的配置文件，一般是hugo.yaml，找到全局开关置为Enable，并把provider置为我们要用的giscus。<img src="https://arendelle-image-bed.oss-cn-hangzhou.aliyuncs.com/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A/20250225194204488.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></li>
+<li>接着下滑，找到giscus的配置处，把刚刚官网给的配置，按名称依次输入。<img src="https://arendelle-image-bed.oss-cn-hangzhou.aliyuncs.com/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A/20250225194515501.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></li>
+<li>行了，享受你的Giscus评论区吧~</li>
+</ol>
 
 </section>
 
@@ -421,7 +519,7 @@
 
 
         <span>
-            最后更新于 02-25, 2025 17:37 UTC&#43;8
+            最后更新于 02-25, 2025 19:46 UTC&#43;8
         </span>
     </section></footer>
 
