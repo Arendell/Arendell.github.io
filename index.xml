@@ -7,7 +7,207 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Arendelle_fei</copyright>
-        <lastBuildDate>Mon, 24 Feb 2025 20:04:28 +0800</lastBuildDate><atom:link href="https://Arendell.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 25 Feb 2025 10:10:38 +0800</lastBuildDate><atom:link href="https://Arendell.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>如何低成本设置阿里云OSS图床</title>
+        <link>https://Arendell.github.io/p/%E5%A6%82%E4%BD%95%E4%BD%8E%E6%88%90%E6%9C%AC%E8%AE%BE%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91oss%E5%9B%BE%E5%BA%8A/</link>
+        <pubDate>Tue, 25 Feb 2025 10:10:38 +0800</pubDate>
+        
+        <guid>https://Arendell.github.io/p/%E5%A6%82%E4%BD%95%E4%BD%8E%E6%88%90%E6%9C%AC%E8%AE%BE%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91oss%E5%9B%BE%E5%BA%8A/</guid>
+        <description>&lt;img src="https://arendelle-image-bed.oss-cn-hangzhou.aliyuncs.com/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A/20250225101925662.png" alt="Featured image of post 如何低成本设置阿里云OSS图床" /&gt;&lt;blockquote&gt;
+&lt;p&gt;本文及后续文章的所有图片均采用此方案保存&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;为什么要做图床&#34;&gt;为什么要做图床
+&lt;/h2&gt;&lt;p&gt;由于众所周知的原因，国内访问GitHub的速度极慢，甚至有时直接访问无法访问（&lt;del&gt;DNS污染？😢&lt;/del&gt;）,因此把图片直接放到Github上，无论是阅读、上传还是维护起来都非常麻烦。另外就是有大量的摄影&lt;del&gt;作品&lt;/del&gt;照片，后续也想放到博客来，一张JPG就是8-10M，如果挂Github实在是慢的出奇。那么有没有一种方法，即可以方便的上传图片，又可以在国内非常高效的访问呢？&lt;strong&gt;有的兄弟，有的。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;方案介绍&#34;&gt;方案介绍
+&lt;/h2&gt;&lt;h3 id=&#34;云端图床&#34;&gt;云端图床
+&lt;/h3&gt;&lt;p&gt;因为之前工作经历和SDN相关，因此我第一时间就想到了使用国内的云服务来实现图床操作，现在问题来了，国内做云的这么多，选择哪家？&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;阿里云&lt;/li&gt;
+&lt;li&gt;百度云&lt;/li&gt;
+&lt;li&gt;腾讯云&lt;/li&gt;
+&lt;li&gt;运营商云&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;简单搜索可知：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;百度云从诞生开始，在各家云服务器内就没啥竞争力。唯一有竞争力的产品是百度网盘，那玩意儿就不提供https外链，想保存图片只允许自己看or客户端链接分享，pass。&lt;/li&gt;
+&lt;li&gt;腾讯云当初做毕设的时候用过，对WX小程序支持度极好，当时学生白嫖了180天的ECS，现在秋后算账找我要大钱，pass。&lt;/li&gt;
+&lt;li&gt;运营商云，曾经工作相关不多解释，pass。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;现在选择只剩一个了，只有阿里云能选了，阿里云我用过两次，第一次是2020年白嫖了90天的ECS，还有2024年SD火的时候，白嫖过他家的SD函数用来炼&lt;del&gt;二次元&lt;/del&gt;丹，总体体验还是很好的，唯一的问题就是他家的控制台老更新，&lt;del&gt;阿里黑话&lt;/del&gt;术语特别多，每次打开都头晕。为了避免阿里和腾子一样秋后找我算大钱。我们登录&lt;a class=&#34;link&#34; href=&#34;https://www.aliyun.com/product/oss/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;阿里云&lt;/a&gt;看看OSS的价格，夺少？&lt;img src=&#34;https://arendelle-image-bed.oss-cn-hangzhou.aliyuncs.com/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A/20250225104809147.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;9块兄弟们，9块&lt;/strong&gt;一年。这不是炸了都夸他炸的响吗！？
+虽然只有40G，但是用作图床绰绰有余了，后续也可以方便的升级容量（秋后算大钱）。&lt;/p&gt;
+&lt;h3 id=&#34;管理软件&#34;&gt;管理软件
+&lt;/h3&gt;&lt;p&gt;好的现在云端OSS的问题解决了，现在还需要个软件能帮我：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;连接云端图床&lt;/li&gt;
+&lt;li&gt;一键上传图片&lt;/li&gt;
+&lt;li&gt;快捷生成MD链接&lt;/li&gt;
+&lt;li&gt;历史图片维护&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;简单在GitHub上检索下，立刻发现了🌟Star🌟巨高的&lt;a class=&#34;link&#34; href=&#34;https://github.com/Molunerfinn/PicGo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PicGO&lt;/a&gt;,他的readme是这么写的：
+&lt;img src=&#34;https://arendelle-image-bed.oss-cn-hangzhou.aliyuncs.com/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A/20250225111142374.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;
+那还等什么，直接跟Star然后下载安装！！！&lt;img src=&#34;https://arendelle-image-bed.oss-cn-hangzhou.aliyuncs.com/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A/20250225111304552.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;部署过程&#34;&gt;部署过程
+&lt;/h2&gt;&lt;h3 id=&#34;购买oss对象存储&#34;&gt;购买OSS对象存储
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;登录&lt;a class=&#34;link&#34; href=&#34;https://www.aliyun.com/product/oss/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;阿里云&lt;/a&gt;，在上方选择产品, 找到OSS对象存储。&lt;img src=&#34;https://arendelle-image-bed.oss-cn-hangzhou.aliyuncs.com/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A/20250225111830294.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;打开配置价格单，我的选择是：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;标准 - 本地冗余（ LRS ）存储包&lt;/li&gt;
+&lt;li&gt;中国内地通用&lt;/li&gt;
+&lt;li&gt;40GB&lt;/li&gt;
+&lt;li&gt;一年
+&lt;img src=&#34;https://arendelle-image-bed.oss-cn-hangzhou.aliyuncs.com/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A/20250225104809147.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;
+这样和算下来一年的价格是9元，当然为了避免秋后给我算大钱，我选择关闭了自动续费，如有需要可自行开启。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;购买完成后点击对象存储控制台，开启OSS服务，这里会再进一遍购买菜单，但是开通费用是0元，未见明显异常（&lt;del&gt;秋后算大钱&lt;/del&gt;🌚）&lt;/li&gt;
+&lt;li&gt;进入OSS的控制台，选择创建 bucket&lt;img src=&#34;https://arendelle-image-bed.oss-cn-hangzhou.aliyuncs.com/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A/20250225112543719.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;按如下参数选择配置，建议选择距离工作/生活最近的节点，还有外部访问的权限，目前无法在创建页面打开，需要创建后单独开启。&lt;img src=&#34;https://arendelle-image-bed.oss-cn-hangzhou.aliyuncs.com/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A/20250225112919820.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;开启外部访问，此步骤需要进入刚刚创建好的bucket控制台，打开外部访问权限，再开放外部读权限（你也不希望外部能写吧🤪）&lt;img src=&#34;https://arendelle-image-bed.oss-cn-hangzhou.aliyuncs.com/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A/20250225113413976.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;给PicGO创建一个用户（说白了就是类似APIkey的东西，让软件可以管理云端图片，注意这个用户的权限和第六步我们开放的权限不是一回事，第六步只是让所有人通过阿里云的链接可以从公网访问到这个图片，而key权限可以直接管理整个OSS），刚刚的权限控制台找到最后一个RAM访问控制，并点击进入控制台。&lt;img src=&#34;https://arendelle-image-bed.oss-cn-hangzhou.aliyuncs.com/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A/20250225113920047.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;选择用户，新建用户，填写这些内容，记得勾选key让PicGO能登录&lt;img src=&#34;https://arendelle-image-bed.oss-cn-hangzhou.aliyuncs.com/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A/20250225114046123.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;申请好后出现用户列表，务必保存好这些信息（说是关闭了不会再有哦）&lt;img src=&#34;https://arendelle-image-bed.oss-cn-hangzhou.aliyuncs.com/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A/20250225114359030.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;给这个用户授权OSS管理权限，这样才能让持有key的PicGO上传图片&lt;img src=&#34;https://arendelle-image-bed.oss-cn-hangzhou.aliyuncs.com/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A/20250225114217432.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;总算把阿里云的部分弄完了，阿里云的控制台可读性太差，全是&lt;del&gt;阿里黑话&lt;/del&gt;SDN术语🤑&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;接下来我们处理PicGO&lt;/p&gt;&lt;/blockquote&gt;
+&lt;ol start=&#34;10&#34;&gt;
+&lt;li&gt;下载&lt;a class=&#34;link&#34; href=&#34;https://github.com/Molunerfinn/PicGo/tags&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PicGO&lt;/a&gt;，记得给人家点点Star🌟&lt;img src=&#34;https://arendelle-image-bed.oss-cn-hangzhou.aliyuncs.com/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A/20250225114747347.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;配置PicGO上的阿里云OSS&lt;img src=&#34;https://arendelle-image-bed.oss-cn-hangzhou.aliyuncs.com/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A/20250225114952453.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;都设置好后，没有问题的话，就可以使用了&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;使用说明&#34;&gt;使用说明
+&lt;/h2&gt;&lt;p&gt;怎么用PicGO，我觉得这个软件已经足够傻瓜，实在不懂也可以看看Github上的&lt;a class=&#34;link&#34; href=&#34;https://github.com/Molunerfinn/PicGo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;readme&lt;/a&gt;,再看不懂可以看看我怎么用：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;用WX/飞书/QQ/Windows等等等乱七八糟截图软件截个图&lt;/li&gt;
+&lt;li&gt;点这里，确定上传&lt;img src=&#34;https://arendelle-image-bed.oss-cn-hangzhou.aliyuncs.com/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A/20250225115443363.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;自动copy图床链接（MD语法），直接粘贴到你的MD博客里&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;测试了下速度真快多了，比Github快了有3倍&lt;img src=&#34;https://arendelle-image-bed.oss-cn-hangzhou.aliyuncs.com/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A/20250225115853408.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;&lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
         <title>大飞的第一篇博客</title>
         <link>https://Arendell.github.io/p/%E5%A4%A7%E9%A3%9E%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</link>
         <pubDate>Mon, 24 Feb 2025 20:04:28 +0800</pubDate>

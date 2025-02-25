@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Posts on 大飞的避难所🤪</title>
-        <link>https://Arendell.github.io/post/</link>
-        <description>Recent content in Posts on 大飞的避难所🤪</description>
+        <title>OSS on 大飞的避难所🤪</title>
+        <link>https://Arendell.github.io/tags/oss/</link>
+        <description>Recent content in OSS on 大飞的避难所🤪</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Arendelle_fei</copyright>
-        <lastBuildDate>Tue, 25 Feb 2025 10:10:38 +0800</lastBuildDate><atom:link href="https://Arendell.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 25 Feb 2025 10:10:38 +0800</lastBuildDate><atom:link href="https://Arendell.github.io/tags/oss/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>如何低成本设置阿里云OSS图床</title>
         <link>https://Arendell.github.io/p/%E5%A6%82%E4%BD%95%E4%BD%8E%E6%88%90%E6%9C%AC%E8%AE%BE%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91oss%E5%9B%BE%E5%BA%8A/</link>
         <pubDate>Tue, 25 Feb 2025 10:10:38 +0800</pubDate>
@@ -205,32 +205,6 @@
 	
 	
 &gt;&lt;/p&gt;&lt;/blockquote&gt;
-</description>
-        </item>
-        <item>
-        <title>大飞的第一篇博客</title>
-        <link>https://Arendell.github.io/p/%E5%A4%A7%E9%A3%9E%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</link>
-        <pubDate>Mon, 24 Feb 2025 20:04:28 +0800</pubDate>
-        
-        <guid>https://Arendell.github.io/p/%E5%A4%A7%E9%A3%9E%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</guid>
-        <description>&lt;img src="https://arendelle-image-bed.oss-cn-hangzhou.aliyuncs.com/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A/pD6L94gfhyQLeNpV-generated_image.jpg" alt="Featured image of post 大飞的第一篇博客" /&gt;&lt;h1 id=&#34;第一篇博客&#34;&gt;第一篇博客
-&lt;/h1&gt;&lt;h2 id=&#34;为什么有这个网页&#34;&gt;为什么有这个网页
-&lt;/h2&gt;&lt;p&gt;偶然在B站刷到了&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1bovfeaEtQ/?share_source=copy_web&amp;amp;vd_source=6fcbc420ccfd341f9f175a79fa5e8c62&#34;  title=&#34;【雷】Hugo &amp;#43; Github免费搭建博客，并实现自动化部署&#34;
-     target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Letere-莱特雷 大佬&lt;/a&gt; 的视频，因讲解非常细致且通俗易懂，遂决定跟着一起部署；另外由于之前的文章、作品等大多散落在知乎、小红书、视觉中国、&lt;del&gt;朋友圈&lt;/del&gt;等平台，也确实需要一个地方来集中管理和保存。🥰🥰🥰&lt;/p&gt;
-&lt;h2 id=&#34;使用了什么技术&#34;&gt;使用了什么技术
-&lt;/h2&gt;&lt;p&gt;最开始已经提到，本网页是基于&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1bovfeaEtQ/?share_source=copy_web&amp;amp;vd_source=6fcbc420ccfd341f9f175a79fa5e8c62&#34;  title=&#34;【雷】Hugo &amp;#43; Github免费搭建博客，并实现自动化部署&#34;
-     target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Letere-莱特雷 大佬&lt;/a&gt; 的视频讲解制作的，因此方案仿照他&lt;strong&gt;采用Hugo+github_page的方案实现&lt;/strong&gt;，并利用GitHub的Action自动部署Hugo生成的静态网页。&lt;/p&gt;
-&lt;h2 id=&#34;这个网页会更新什么内容&#34;&gt;这个网页会更新什么内容
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;技术笔记笔记📃&lt;/li&gt;
-&lt;li&gt;摄影作品📸&lt;/li&gt;
-&lt;li&gt;趣味分享🎨&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;个人喜欢一切花里胡哨的东西，所以可能会在美化网页上做很多事🤷‍♀️&lt;/p&gt;
-&lt;h2 id=&#34;这个网页会维护多久更新频率&#34;&gt;这个网页会维护多久?更新频率？
-&lt;/h2&gt;&lt;p&gt;理论上只要&lt;del&gt;大飞&lt;/del&gt;Github_Page活着就会一直更新,更新频率得看我的兴趣，有时候兴趣上头了就会一天三四更，犯懒了就不更了。&lt;/p&gt;
 </description>
         </item>
         
