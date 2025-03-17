@@ -7,13 +7,13 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Arendelle_fei</copyright>
-        <lastBuildDate>Mon, 17 Mar 2025 14:06:22 +0800</lastBuildDate><atom:link href="https://Arendell.github.io/tags/deepseek/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 17 Mar 2025 14:10:18 +0800</lastBuildDate><atom:link href="https://Arendell.github.io/tags/deepseek/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>如何在个人机上部署本地大模型</title>
         <link>https://Arendell.github.io/p/%E5%A6%82%E4%BD%95%E5%9C%A8%E4%B8%AA%E4%BA%BA%E6%9C%BA%E4%B8%8A%E9%83%A8%E7%BD%B2%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/</link>
         <pubDate>Mon, 17 Mar 2025 11:34:35 +0800</pubDate>
         
         <guid>https://Arendell.github.io/p/%E5%A6%82%E4%BD%95%E5%9C%A8%E4%B8%AA%E4%BA%BA%E6%9C%BA%E4%B8%8A%E9%83%A8%E7%BD%B2%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/</guid>
-        <description>&lt;img src="https://arendelle-image-bed.oss-cn-hangzhou.aliyuncs.com/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250211135621.png&#34;" alt="Featured image of post 如何在个人机上部署本地大模型" /&gt;&lt;blockquote&gt;
+        <description>&lt;img src="https://arendelle-image-bed.oss-cn-hangzhou.aliyuncs.com/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250211135621.png" alt="Featured image of post 如何在个人机上部署本地大模型" /&gt;&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;写在前面：&lt;/strong&gt; 本文用于指导对本地部署大模型感兴趣的朋友，方便大家在个人机上体验纯私域大模型，本指导选用全开源软件方案，&lt;font color = red&gt;仅作为抛砖引玉的简单指导性文档，不额外讲解原理介绍、微调模型、训练模型等。&lt;/font&gt;由于部署在个人电脑，因此不额外部署docker，直接部署至windows，如需部署至docker请参考其他官方文档。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;一方案介绍&#34;&gt;一、方案介绍
 &lt;/h2&gt;&lt;p&gt;考虑个人机主要为集成显共享显存，整体处理性能较弱，且没有独立CUDA、NPU来加速大模型推理，因此整体采用&lt;font color = red&gt;&lt;strong&gt;1.5b的超微量模型&lt;/strong&gt;&lt;/font&gt;来体验，后端采用&lt;a class=&#34;link&#34; href=&#34;https://ollama.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
